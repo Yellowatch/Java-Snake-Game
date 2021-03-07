@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-14">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/Users/Omer Yalavac/.m2/repository/com/github/goxr3plus/java-google-speech-api/V2.1/java-google-speech-api-V2.1.jar" sourcepath="C:/Users/Omer Yalavac/.m2/repository/com/github/goxr3plus/java-google-speech-api/V2.1/java-google-speech-api-V2.1-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="com.github.goxr3plus"/>
+			<attribute name="maven.artifactId" value="java-google-speech-api"/>
+			<attribute name="maven.version" value="V2.1"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/Omer Yalavac/.m2/repository/javazoom/jlayer/1.0.1/jlayer-1.0.1.jar" sourcepath="C:/Users/Omer Yalavac/.m2/repository/javazoom/jlayer/1.0.1/jlayer-1.0.1-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="javazoom"/>
+			<attribute name="maven.artifactId" value="jlayer"/>
+			<attribute name="maven.version" value="1.0.1"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

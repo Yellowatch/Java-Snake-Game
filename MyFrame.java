@@ -15,8 +15,12 @@ public class MyFrame extends JFrame {
 	private JPanel contentPane;
 	private GamePanel gamePanel;
 	private MultiplayerPanel multiplayerPanel;
+	private SingleAIPanel singleAIPanel;
+	private AStarAIPanel aStarAIPanel;
 	private GameOverPanel GOPanel;
 	private GOMultiplayerPanel GOMP;
+	private GOSingleAIPanel GOSAI;
+	private GOAStarPanel GOAS;
 	private MenuPanel MPanel = new MenuPanel(SCREEN_WIDTH, SCREEN_HEIGHT, this);
 	CardLayout cardLayout = new CardLayout();
 
@@ -75,4 +79,45 @@ public class MyFrame extends JFrame {
 		multiplayerPanel.requestFocusInWindow();
 	}
 
+	public void singleAI() {
+		singleAIPanel = new SingleAIPanel(this, SCREEN_WIDTH, SCREEN_HEIGHT);
+		contentPane.add(singleAIPanel, "Single AI Panel");
+        cardLayout.next(contentPane);
+		contentPane.remove(MPanel);
+		singleAIPanel.requestFocusInWindow();
+	}
+	
+	public void gameOverSingleAI(GOSingleAIPanel GOSAI) {
+		this.GOSAI = GOSAI;
+		contentPane.add(GOSAI, "GameOver Single AI Panel");
+        cardLayout.next(contentPane);
+	}
+	
+	public void playAgainSingleAI() {
+		cardLayout.next(contentPane);
+		singleAIPanel.restart();
+		contentPane.remove(GOSAI);
+		singleAIPanel.requestFocusInWindow();
+	}
+
+	public void aStarAI() {
+		aStarAIPanel = new AStarAIPanel(this, SCREEN_WIDTH, SCREEN_HEIGHT);
+		contentPane.add(aStarAIPanel, "A* AI Panel");
+        cardLayout.next(contentPane);
+		contentPane.remove(MPanel);
+		aStarAIPanel.requestFocusInWindow();
+	}
+
+	public void gameOverAStar(GOAStarPanel GOAS) {
+		this.GOAS = GOAS;
+		contentPane.add(GOAS, "GameOver A* Panel");
+        cardLayout.next(contentPane);
+	}
+	
+	public void playAgainAStar() {
+		cardLayout.next(contentPane);
+		aStarAIPanel.restart();
+		contentPane.remove(GOAS);
+		aStarAIPanel.requestFocusInWindow();
+	}
 }
